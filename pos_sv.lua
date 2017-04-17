@@ -14,6 +14,6 @@ local function savePlayerCoords()
                         end
                     
                     end)
-            savePlayerCoords
+            savePlayerCoords()
         end)
     end
