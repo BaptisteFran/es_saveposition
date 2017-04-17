@@ -1,5 +1,5 @@
 require "resources/essentialmode/lib/MySQL"
-MySQL:open("localhost", "gta5_gamemode_essential", "root", "fanny123")
+MySQL:open("localhost", "gta5_gamemode_essential", "root", "password")
 
 RegisterServerEvent("es:coords")
 AddEventHandler("es:coords", function( PlayerName , x , y , z )
