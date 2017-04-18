@@ -1,6 +1,7 @@
 --RegisterNetEvent("es:savepos")
 --AddEventHandler("es:savepos", function()
 local oldPos
+local PlayerId = getPlayerFromId()
 
 Citizen.CreateThread(function()
 	while true do
