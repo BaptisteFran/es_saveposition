@@ -9,7 +9,7 @@ AddEventHandler('es:coords', function(x, y, z)
 	if(Users[source])then
 		Users[source]:setCoords(x, y, z)
                 MySQL:executeQuery("UPDATE user_position SET x_pos='@x' WHERE identifier = '@username' AND y_pos = '@y' 
-                AND z_pos = '@z'",{['@usersame'] = PlayerId, ['@x'] = x, ['@y'] = y, ['@z'] = z})
+                AND z_pos = '@z'",{['@usersame'] = Users[source], ['@x'] = x, ['@y'] = y, ['@z'] = z})
                 end)
 
 	end
