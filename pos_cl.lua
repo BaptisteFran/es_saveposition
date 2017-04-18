@@ -16,11 +16,4 @@ Citizen.CreateThread(function()
                         end
                 end)
 
-        
-Citizen.CreateThread(function ()
-    while true do
-    Citizen.Wait(1000)
-        TriggerServerEvent('es:coords')
-            end
-        end)
-
+       
