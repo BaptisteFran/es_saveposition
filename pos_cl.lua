@@ -1,6 +1,15 @@
-RegisterNetEvent("es:savepos")
-AddEventHandler("es:savepos", function()
-        local x, y, z = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
-        local PlayerId = getPlayerFromId()
-        TriggerServerEvent("es:coords", PlayerId, x, y, z)
-end)
+--RegisterNetEvent("es:savepos")
+--AddEventHandler("es:savepos", function()
+local oldPos
+
+Citizen.CreateThread(function()
+	while true do
+		Citizen.Wait(1000)
+		local pos = GetEntityCoords(GetPlayerPed(-1))
+
+		if(oldPos ~= pos)then
+			TriggerServerEvent('es:coords', pos.x, pos.y, pos.z)
+                                oldPos = pos
+                                end
+                        end
+                end)
