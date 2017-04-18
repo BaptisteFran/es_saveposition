@@ -12,5 +12,3 @@ AddEventHandler('es:coords', function(x, y, z)
                 end)
 
 	end
-end)
-
