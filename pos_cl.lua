@@ -1,6 +1,6 @@
 RegisterNetEvent("es:savepos")
 AddEventHandler("es:savepos", function()
         local x, y, z = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
-        local PlayerName = GetPlayerName()
-        TriggerServerEvent("es:coords", PlayerName, x, y, z)
+        local PlayerName = getPlayerFromId()
+        TriggerServerEvent("es:coords", PlayerId, x, y, z)
 end)
