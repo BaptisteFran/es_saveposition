@@ -34,4 +34,4 @@ Citizen.CreateThread(function()
                         end
                 end)
 
-       
+      -- i could do that in only one command, but i think it's clearer with 3
