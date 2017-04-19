@@ -1,6 +1,7 @@
 --RegisterNetEvent("es:savepos")
 --AddEventHandler("es:savepos", function()
---local PlayerId = getPlayerFromId()
+		
+local player = GetPlayerPed(-1)
 local x = 0.0
 local y = 0.0
 local z = 0.0
