@@ -1,8 +1,7 @@
 CREATE TABLE `user_position` (
-  `ID` int(10) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) NOT NULL,
-  `pos_x` varchar(255) NOT NULL DEFAULT '0.0'
-  `pos_y` varchar(255) NOT NULL DEFAULT '0.0'
-  `pos_z` varchar(255) NOT NULL DEFAULT '0.0'
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `username` varchar(150) CHARACTER SET utf8mb4 NOT NULL,
+  `pos_x` float NOT NULL,
+  `pos_y` float NOT NULL,
+  `pos_z` float NOT NULL,
+  `id` varchar(50) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
